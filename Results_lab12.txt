@@ -1,0 +1,21 @@
+7 ?- consult(['c:/Users/aljaz/Downloads/graphs.pl']).
+true.
+
+8 ?- travel('Dammam', 'Madinah', P).
+P = ['Dammam', 'Qatif', 'Madinah'] ;
+false.
+
+9 ?- travel('Riyadh', 'Makkah', P).
+P = ['Riyadh', 'Dammam', 'Qatif', 'Madinah', 'Makkah'] ;
+false.
+
+10 ?- travel('Makkah', 'Riyadh', P).
+P = ['Makkah', 'Madinah', 'Taif', 'Dammam', 'Riyadh'] ;
+P = ['Makkah', 'Madinah', 'Tabuk', 'Taif', 'Dammam', 'Riyadh'] ;
+P = ['Makkah', 'Riyadh'] ;
+false.
+
+11 ?- travel('Makkah', 'Madinah', P).
+P = ['Makkah', 'Madinah'] ;
+P = ['Makkah', 'Riyadh', 'Dammam', 'Qatif', 'Madinah'] ;
+false.
